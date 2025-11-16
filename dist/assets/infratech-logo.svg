@@ -1,0 +1,15 @@
+<svg width="360" height="240" viewBox="0 0 360 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="360" height="240" fill="#F7F8FC"/>
+  <g transform="translate(50 24)">
+    <path d="M118 12L76 70V146L118 204L160 146V70L118 12Z" fill="#0B3C5D"/>
+    <path d="M118 32L92 70V136L118 174L144 136V70L118 32Z" fill="#135F85"/>
+    <circle cx="118" cy="18" r="14" fill="#0B3C5D"/>
+    <circle cx="86" cy="54" r="12" fill="#0B3C5D"/>
+    <circle cx="150" cy="54" r="12" fill="#0B3C5D"/>
+    <path d="M118 44L104 68C100 74 94 78 88 78H82V136L102 168L118 144L134 168L154 136V78H148C142 78 136 74 132 68L118 44Z" fill="#F7F8FC"/>
+    <path d="M174 56L140 116H160L126 176H186L150 136H170L206 80H178L220 16L174 56Z" fill="#F4A340"/>
+    <path d="M206 80L170 136H184L150 176H186L220 120H206L240 64H206Z" fill="#D97C2A"/>
+  </g>
+  <text x="180" y="190" text-anchor="middle" fill="#0B3C5D" font-family="'Montserrat', sans-serif" font-size="40" font-weight="700">INFRATECH</text>
+  <text x="180" y="220" text-anchor="middle" fill="#135F85" font-family="'Montserrat', sans-serif" font-size="18" font-weight="500" letter-spacing="0.18em">ESPECIALISTA EM ELÉTRICA</text>
+</svg>
