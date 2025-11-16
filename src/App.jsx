@@ -850,11 +850,6 @@ export default function App() {
                 />
               </div>
 
-              <input type="hidden" name="fvv" value="1" />
-              <input type="hidden" name="partialResponse" value="[]" />
-              <input type="hidden" name="pageHistory" value="0" />
-              <input type="hidden" name="fbzx" value="-5389077469478687266" />
-
               <Button type="submit" size="lg" className="w-full bg-[#FFD700] text-black hover:bg-[#FFD700]/90">
                 Enviar solicitação
                 <ArrowRight className="h-5 w-5" />
