@@ -15,19 +15,34 @@ const sizeClasses = {
 };
 
 export const Button = React.forwardRef(
-  ({ className, variant = 'default', size = 'default', type = 'button', ...props }, ref) => (
-    <button
-      ref={ref}
-      type={type}
-      className={cn(
+  (
+    {
+      as: Component = 'button',
+      className,
+      variant = 'default',
+      size = 'default',
+      type = 'button',
+      ...props
+    },
+    ref
+  ) => {
+    const componentProps = {
+      ref,
+      className: cn(
         'inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFD700] focus-visible:ring-offset-2 focus-visible:ring-offset-infratech-black disabled:pointer-events-none disabled:opacity-60',
         variantClasses[variant] ?? variantClasses.default,
         sizeClasses[size] ?? sizeClasses.default,
         className
-      )}
-      {...props}
-    />
-  )
+      ),
+      ...props,
+    };
+
+    if (Component === 'button') {
+      componentProps.type = type;
+    }
+
+    return <Component {...componentProps} />;
+  }
 );
 
 Button.displayName = 'Button';

@@ -270,16 +270,31 @@ export default function App() {
               className="px-8 py-4 text-lg"
               onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Solicitar orçamento
+              Solicitar inspeção
               <ArrowRight className="h-5 w-5" />
             </Button>
             <Button
+              as="a"
               variant="outline"
               size="lg"
               className="px-8 py-4 text-lg"
-              onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
+              href="https://wa.me/5511988102130?text=Ol%C3%A1%20Infratech!%20Gostaria%20de%20falar%20com%20um%20especialista%20sobre%20um%20projeto%20el%C3%A9trico."
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Ver serviços
+              Falar com especialista
+              <ArrowRight className="h-5 w-5" />
+            </Button>
+            <Button
+              as="a"
+              variant="ghost"
+              size="lg"
+              className="px-8 py-4 text-lg border border-white/10"
+              href="/assets/infratech-portfolio.pdf"
+              download
+            >
+              Baixar portfólio
+              <ArrowRight className="h-5 w-5" />
             </Button>
           </motion.div>
         </motion.div>
@@ -340,6 +355,23 @@ export default function App() {
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-16 flex justify-center"
+          >
+            <Button
+              size="lg"
+              className="px-8 py-4 text-lg"
+              onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Solicitar inspeção
+              <ArrowRight className="h-5 w-5" />
+            </Button>
+          </motion.div>
         </div>
       </section>
 
@@ -377,12 +409,16 @@ export default function App() {
                 </div>
               </div>
               <Button
+                as="a"
                 variant="outline"
                 size="lg"
                 className="mt-10 border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-black"
-                onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
+                href="https://wa.me/5511988102130?text=Ol%C3%A1%20Infratech!%20Preciso%20falar%20com%20um%20especialista%20em%20el%C3%A9trica."
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Fale com nossos engenheiros
+                Falar com especialista
+                <ArrowRight className="h-5 w-5" />
               </Button>
             </motion.div>
 
@@ -612,12 +648,16 @@ export default function App() {
                 específico, fale direto com nossos especialistas.
               </p>
               <Button
+                as="a"
                 variant="outline"
                 size="lg"
                 className="mt-10 border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-black"
-                onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
+                href="https://wa.me/5511988102130?text=Ol%C3%A1%20Infratech!%20Tenho%20d%C3%BAvidas%20t%C3%A9cnicas%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Solicitar atendimento técnico
+                Falar com especialista
+                <ArrowRight className="h-5 w-5" />
               </Button>
             </motion.div>
 
@@ -860,7 +900,7 @@ export default function App() {
             </p>
           </motion.div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-4">
             <div className="flex items-center gap-3 text-black/80">
               <Phone className="h-5 w-5" />
               <span>+55 (11) 98810-2130</span>
@@ -872,6 +912,10 @@ export default function App() {
             <div className="flex items-center gap-3 text-black/80">
               <MapPin className="h-5 w-5" />
               <span>R. Mauro de Araújo Ribeiro, 565 - Cidade D'Abril, São Paulo - SP, 05182-000</span>
+            </div>
+            <div className="flex items-center gap-3 text-black/80">
+              <Clock className="h-5 w-5" />
+              <span>Seg a Sex · 08h às 18h</span>
             </div>
           </div>
         </div>
@@ -892,7 +936,7 @@ export default function App() {
       </footer>
 
       <motion.a
-        href="https://wa.me/5511988102130?text=Olá%20Infratech!%20Quero%20um%20orçamento."
+        href="https://wa.me/5511988102130?text=Ol%C3%A1%20Infratech!%20Gostaria%20de%20agendar%20uma%20inspe%C3%A7%C3%A3o%20el%C3%A9trica%20com%20um%20especialista."
         target="_blank"
         rel="noopener noreferrer"
         className="group fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full bg-[#25D366] px-5 py-3 text-[#0A0A0A] shadow-[0_20px_45px_rgba(37,211,102,0.35)] transition hover:shadow-[0_26px_60px_rgba(37,211,102,0.45)]"
@@ -906,6 +950,7 @@ export default function App() {
         <div className="pr-2">
           <p className="text-xs font-semibold uppercase tracking-wide opacity-70">Atendimento rápido</p>
           <p className="text-sm font-bold">Fale no WhatsApp</p>
+          <p className="text-xs opacity-70">Seg a Sex · 08h às 18h</p>
         </div>
       </motion.a>
     </div>
