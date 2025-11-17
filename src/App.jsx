@@ -179,31 +179,19 @@ const insights = [
     title: 'Como reduzir custos com eficiência energética em edifícios comerciais',
     excerpt: 'Práticas rápidas para corte de consumo, retrofit de iluminação e monitoramento inteligente.',
     tag: 'Eficiência',
+    url: 'https://infratech.com.br/blog/eficiencia-energetica-edificios',
   },
   {
     title: 'NR10: o que muda para equipes terceirizadas em 2025',
     excerpt: 'Checklist de conformidade e responsabilidades para contratantes e executores.',
     tag: 'Normas',
+    url: 'https://infratech.com.br/blog/nr10-equipes-terceirizadas-2025',
   },
   {
     title: 'Cases de automação elétrica em condomínios residenciais',
     excerpt: 'Integração de painéis solares, baterias e automação para reduzir falhas.',
     tag: 'Inovação',
-  },
-];
-
-const coverageRegions = [
-  {
-    region: 'Sudeste',
-    bases: 'São Paulo, Campinas, Rio de Janeiro, Belo Horizonte',
-  },
-  {
-    region: 'Sul',
-    bases: 'Curitiba, Porto Alegre',
-  },
-  {
-    region: 'Centro-Oeste',
-    bases: 'Brasília, Goiânia',
+    url: 'https://infratech.com.br/blog/automacao-eletrica-condominios',
   },
 ];
 
@@ -712,10 +700,18 @@ export default function App() {
                 </span>
                 <h3 className="mt-5 text-2xl font-bold text-white">{post.title}</h3>
                 <p className="mt-4 text-white/70">{post.excerpt}</p>
-                <button className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#FFD700]">
+                <Button
+                  as="a"
+                  variant="ghost"
+                  size="sm"
+                  className="mt-6 px-0 text-[#FFD700] hover:bg-transparent hover:text-[#FFD700]/80"
+                  href={post.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Ler artigo
                   <ArrowRight className="h-4 w-4" />
-                </button>
+                </Button>
               </motion.article>
             ))}
           </div>
@@ -738,49 +734,29 @@ export default function App() {
             </p>
           </motion.div>
 
-          <div className="grid gap-8 md:grid-cols-2">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="rounded-3xl border border-white/10 bg-white/5 p-8"
-            >
-              <h3 className="text-2xl font-bold text-white">Bases operacionais</h3>
-              <ul className="mt-6 space-y-4 text-white/70">
-                {coverageRegions.map((region) => (
-                  <li key={region.region}>
-                    <p className="text-white font-semibold">{region.region}</p>
-                    <p>{region.bases}</p>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex items-center justify-center"
-            >
-              <div className="relative w-full max-w-md overflow-hidden rounded-3xl border border-white/10">
-                <img
-                  src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80"
-                  alt="Mapa estilizado com rede elétrica"
-                  className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-black/60 p-4 text-sm text-white">
-                  <p className="font-semibold text-[#FFD700]">Atendimento nacional</p>
-                  <p>
-                    Centros de operação em SP, RJ e MG com times móveis para demais regiões. SLA emergencial em até 4h
-                    nas capitais.
-                  </p>
-                </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mx-auto flex max-w-md justify-center"
+          >
+            <div className="relative w-full overflow-hidden rounded-3xl border border-white/10">
+              <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80"
+                alt="Mapa estilizado com rede elétrica"
+                className="h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-black/60 p-4 text-sm text-white">
+                <p className="font-semibold text-[#FFD700]">Atendimento nacional</p>
+                <p>
+                  Centros de operação em SP, RJ e MG com times móveis para demais regiões. SLA emergencial em até 4h nas
+                  capitais.
+                </p>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
 
         </div>
       </section>
